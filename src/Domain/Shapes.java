@@ -1,9 +1,5 @@
 package Domain;
 
-/**
- * @author Rodney
- */
-public class Shapes {
-
-
+public interface Shapes {
+    String getNameOfShape();
 }
