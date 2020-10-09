@@ -3,5 +3,5 @@ package Domain;
 /**
  * @author Rodney
  */
-public class Square {
+public class Square extends TwoDimensionalShape{
 }

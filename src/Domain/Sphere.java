@@ -3,6 +3,6 @@ package Domain;
 /**
  * @author Rodney
  */
-public class Sphere {
+public class Sphere extends ThreeDimensionalShape{
 
 }
