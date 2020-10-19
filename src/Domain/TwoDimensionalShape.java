@@ -1,6 +1,8 @@
 package Domain;
 
-public class TwoDimensionalShape implements Shapes{
+import java.util.Objects;
+
+public class TwoDimensionalShape implements Shape {
     private double surface;
     private double perimeter;
     private String name;
@@ -17,14 +19,13 @@ public class TwoDimensionalShape implements Shapes{
         return perimeter;
     }
 
-    @Override
     public String getNameOfShape() {
-        return null;
+        return this.name;
     }
 
-    @Override
     public String toString() {
         return "This " + name + " has a surface of " + getSurface() + " cm2\n" +
                 "and a perimeter of " + getPerimeter() + " cm";
     }
+
 }
