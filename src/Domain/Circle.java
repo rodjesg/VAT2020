@@ -1,5 +1,7 @@
 package Domain;
 
+import java.awt.*;
+
 public class Circle extends TwoDimensionalShape {
     private double radius;
 
@@ -12,11 +14,19 @@ public class Circle extends TwoDimensionalShape {
         return radius * 2;
     }
 
+    /**
+     * Calculate surface from circle
+     * @return surface
+     */
     @Override
     public double getSurface() {
         return Math.PI * (radius * radius);
     }
 
+    /**
+     * Calculate perimeter from circle
+     * @return perimeter
+     */
     @Override
     public double getPerimeter() {
         return Math.PI * 2 * radius;
@@ -29,7 +39,8 @@ public class Circle extends TwoDimensionalShape {
 
     @Override
     public String toString() {
-        return "Radius = " + this.radius + "cm (Diameter = " + this.getDiameter() + " cm\n" +
+        return "Radius = " + this.radius + "cm (Diameter = " + this.getDiameter() + " cm)\n" +
                 super.toString();
     }
+
 }
