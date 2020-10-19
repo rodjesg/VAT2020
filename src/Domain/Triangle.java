@@ -15,17 +15,25 @@ public class Triangle extends TwoDimensionalShape {
         this.sideC = sideC;
     }
 
+    /**
+     * Calculate surface from triangle
+     * Heron's Formula is used (calculates triangle's area from the lengths of it's sides)
+     * Step 1. Calculate "s" (half of the triangles perimeter)
+     * Step 2. Calculate the Area
+     * @return
+     */
     @Override
     public double getSurface() {
-        //Heron's Formula (calculate triangle's area from it's sides)
-        //Step 1. Calculate "s" (half of the triangles perimeter):
         double s = (this.sideA + this.sideB + this.sideC) / 2;
 
-        //Step 2: Calculate the Area:
         double area = Math.sqrt( s * (s - sideA) * (s - sideB) * (s - sideC) );
         return area;
     }
 
+    /**
+     * Calculate perimeter from triangle
+     * @return perimeter
+     */
     @Override
     public double getPerimeter() {
         return sideA + sideB + sideC;
