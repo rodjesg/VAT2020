@@ -13,14 +13,22 @@ public class Square extends TwoDimensionalShape {
         this.width = width;
     }
 
+    /**
+     * Calculate surface from square
+     * @return surface
+     */
     @Override
     public double getSurface() {
-        return length * width;
+        return this.length * this.width;
     }
 
+    /**
+     * Calculate perimeter from square
+     * @return perimeter
+     */
     @Override
     public double getPerimeter() {
-        return (length + width)*2;
+        return (this.length + this.width)*2;
     }
 
     @Override
@@ -30,8 +38,8 @@ public class Square extends TwoDimensionalShape {
 
     @Override
     public String toString() {
-        return  "Length = " + length + " cm\n" +
-                "Width = " + width + " cm\n" +
+        return  "Length = " + this.length + " cm\n" +
+                "Width = " + this.width + " cm\n" +
                 super.toString();
     }
 }
