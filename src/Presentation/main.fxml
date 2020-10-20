@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="463.0" text="VAT 2020" type="TitledPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BusinessLogic.ViewController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="438.0">
+         <children>
+            <Button fx:id="saveButton" layoutX="61.0" layoutY="288.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Opslaan" />
+            <Button fx:id="loadButton" layoutX="62.0" layoutY="333.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="125.0" text="Laad" />
+            <Button fx:id="showTotalButton" layoutX="266.0" layoutY="245.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0" text="Totale inhoud" />
+            <Button fx:id="removeButton" layoutX="266.0" layoutY="285.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" text="Verwijder Vorm" />
+            <ListView fx:id="listViewPanel" layoutX="234.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" />
+            <ComboBox fx:id="dropDownMenu" layoutX="37.0" layoutY="36.0" prefWidth="150.0" />
+            <TextField layoutX="38.0" layoutY="98.0" />
+            <TextField layoutX="38.0" layoutY="162.0" />
+         </children></AnchorPane>
+  </content>
+</fx:root>
