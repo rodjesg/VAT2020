@@ -2,7 +2,7 @@ package Domain;
 
 import java.util.Objects;
 
-public class TwoDimensionalShape implements Shapes {
+public class TwoDimensionalShape implements Shape {
     private double surface;
     private double perimeter;
     private String name;
