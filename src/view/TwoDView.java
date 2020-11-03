@@ -1,12 +1,15 @@
-package view;
+package View;
 
 import Domain.ShapeHolder;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class TwoDView {
@@ -30,18 +33,42 @@ public class TwoDView {
         Label label = new Label( labelText );
         layout.setPadding( new Insets( 10 ) );
 
+        //Make separator
+        Separator separator = new Separator();
+        separator.setMinWidth( 300 );
+        separator.setHalignment( HPos.CENTER );
+
+        //Make SaveView
+        SaveView saveView = new SaveView();
+        //Make LoadView
+        LoadView loadview = new LoadView();
+        //Put them in Hbox
+        HBox saveAndLoad = new HBox(  );
+        //Add Loadview to Hbox
+        saveAndLoad.getChildren().addAll( saveView.saveElement(shapeHolder), loadview.loadFile( shapeHolder ) );
+
+        VBox sepSaveAndLoad = new VBox(  );
+        sepSaveAndLoad.setPadding( new Insets( 10 ) );
+        sepSaveAndLoad.getChildren().addAll( separator, saveAndLoad );
+
         // 2D-Shapes elements
         VBox VtwoD = twoD( layout, shapeHolder );
 
+        //Get ListViewElement
+        ListShapeView listShapeView = new ListShapeView( shapeHolder );
+        VBox listShapes = listShapeView.getView();
+
         layout.setTop( label );
         layout.setLeft( VtwoD );
+        layout.setBottom( sepSaveAndLoad );
+        layout.setRight( listShapes );
 
 
         return layout;
     }
 
     public VBox twoD(BorderPane bp, ShapeHolder sh) {
-        VBox twoD = new VBox(  );
+        VBox twoD = new VBox( );
 
         //Group RadioButtons
         ToggleGroup group = new ToggleGroup();
@@ -61,20 +88,20 @@ public class TwoDView {
                     RadioButton button = (RadioButton) group.getSelectedToggle();
                     if(button.getText()== shape1){
                         CircleView circleView = new CircleView( sh );
-                        VBox insert = new VBox(  );
-                        insert = circleView.circleInserts();
+                        VBox insert = new VBox( );
+                        insert = circleView.circleInserts(shape1, shapeHolder);
                         bp.setCenter( insert );
                         insert.setSpacing( 5 );
                     } else if (button.getText()== shape2){
                         SquareView squareView = new SquareView( sh );
                         VBox insert = new VBox(  );
-                        insert = squareView.squareInserts();
+                        insert = squareView.squareInserts(shape2, shapeHolder);
                         bp.setCenter( insert );
                         insert.setSpacing( 5 );
                     } else if (button.getText()== shape3){
                         TriangleView triangleView = new TriangleView( sh );
                         VBox insert = new VBox(  );
-                        insert = triangleView.triangleInserts();
+                        insert = triangleView.triangleInserts(shape3, shapeHolder);
                         bp.setCenter( insert );
                         insert.setSpacing( 5 );
                     };

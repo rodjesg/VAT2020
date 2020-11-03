@@ -1,0 +1,9 @@
+This shape-list contains: 
+circles: 2
+
+This circle has a surface of 113.1 cm²
+and a perimeter of 37.7 cm
+
+This circle has a surface of 113.1 cm²
+and a perimeter of 37.7 cm
+

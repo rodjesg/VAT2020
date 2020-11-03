@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="889.0" y="657.0">Domain.Sphere</node>
+    <node x="850.5" y="256.0">Domain.ThreeDimensionalShape</node>
+    <node x="0.0" y="1297.0">Domain.ShapeHolder</node>
+    <node x="1437.25" y="0.0">DataStorage.DatabaseConnection</node>
+    <node x="254.0" y="1682.0">View.ListShapeView</node>
+    <node x="1071.0" y="646.0">Domain.Block</node>
+    <node x="267.00000000000006" y="657.0">Domain.Square</node>
+    <node x="1539.0" y="1297.0">ShapeTest</node>
+    <node x="1587.0" y="234.0">DataStorage.DAO</node>
+    <node x="1215.5" y="898.0">View.ThreeDView</node>
+    <node x="596.0" y="1178.0">View.TriangleView</node>
+    <node x="302.0" y="1178.0">View.CircleView</node>
+    <node x="360.0" y="1297.0">Domain.ShapeDB</node>
+    <node x="737.0" y="1297.0">ShapeHolderTest</node>
+    <node x="1223.0" y="1178.0">View.SphereView</node>
+    <node x="561.25" y="0.0">Domain.Shape</node>
+    <node x="290.5" y="898.0">View.TwoDView</node>
+    <node x="0.0" y="646.0">Domain.Triangle</node>
+    <node x="1348.0" y="289.5">DataStorage.DatabaseConnection.UsesStatement</node>
+    <node x="484.00000000000006" y="657.0">Domain.Circle</node>
+    <node x="1525.0" y="1178.0">View.CylinderView</node>
+    <node x="928.0" y="1178.0">View.BlocView</node>
+    <node x="1210.0" y="1297.0">BusinessLogic.FileManager</node>
+    <node x="524.0" y="1682.0">View.SaveView</node>
+    <node x="0.0" y="1682.0">Main.Main</node>
+    <node x="666.0" y="657.0">Domain.Cylinder</node>
+    <node x="0.0" y="1178.0">View.SquareView</node>
+    <node x="249.50000000000006" y="256.0">Domain.TwoDimensionalShape</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Domain.Block" target="Domain.ThreeDimensionalShape">
+      <point x="0.0" y="-103.5" />
+      <point x="1187.0" y="621.0" />
+      <point x="1049.6666666666667" y="621.0" />
+      <point x="79.66666666666674" y="170.0" />
+    </edge>
+    <edge source="Domain.Triangle" target="Domain.TwoDimensionalShape">
+      <point x="0.0" y="-103.5" />
+      <point x="123.5" y="621.0" />
+      <point x="288.16666666666674" y="621.0" />
+      <point x="-77.33333333333331" y="170.0" />
+    </edge>
+    <edge source="DataStorage.DAO" target="DataStorage.DatabaseConnection">
+      <point x="0.0" y="-81.0" />
+      <point x="1714.0" y="209.0" />
+      <point x="1660.0" y="209.0" />
+      <point x="74.25" y="92.0" />
+    </edge>
+    <edge source="Domain.Circle" target="Domain.TwoDimensionalShape">
+      <point x="0.0" y="-92.5" />
+      <point x="565.0" y="621.0" />
+      <point x="442.83333333333337" y="621.0" />
+      <point x="77.33333333333331" y="170.0" />
+    </edge>
+    <edge source="Domain.Sphere" target="Domain.ThreeDimensionalShape">
+      <point x="0.0" y="-92.5" />
+      <point x="0.0" y="170.0" />
+    </edge>
+    <edge source="View.SphereView" target="View.ThreeDView">
+      <point x="0.0" y="-37.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="Domain.Square" target="Domain.TwoDimensionalShape">
+      <point x="0.0" y="-92.5" />
+      <point x="0.0" y="170.0" />
+    </edge>
+    <edge source="View.CircleView" target="View.TwoDView">
+      <point x="0.0" y="-37.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="View.CylinderView" target="View.ThreeDView">
+      <point x="0.0" y="-37.0" />
+      <point x="1666.5" y="1153.0" />
+      <point x="1463.0" y="1153.0" />
+      <point x="99.0" y="115.0" />
+    </edge>
+    <edge source="Domain.Cylinder" target="Domain.ThreeDimensionalShape">
+      <point x="0.0" y="-92.5" />
+      <point x="767.5" y="621.0" />
+      <point x="890.3333333333335" y="621.0" />
+      <point x="-79.66666666666663" y="170.0" />
+    </edge>
+    <edge source="Domain.TwoDimensionalShape" target="Domain.Shape">
+      <point x="0.0" y="-170.0" />
+      <point x="365.50000000000006" y="231.0" />
+      <point x="614.5" y="231.0" />
+      <point x="-53.25" y="103.0" />
+    </edge>
+    <edge source="Domain.ThreeDimensionalShape" target="Domain.Shape">
+      <point x="0.0" y="-170.0" />
+      <point x="970.0" y="231.0" />
+      <point x="721.0" y="231.0" />
+      <point x="53.25" y="103.0" />
+    </edge>
+    <edge source="DataStorage.DatabaseConnection.UsesStatement" target="DataStorage.DatabaseConnection">
+      <point x="0.0" y="-25.5" />
+      <point x="1457.5" y="209.0" />
+      <point x="1511.5" y="209.0" />
+      <point x="-74.25" y="92.0" />
+    </edge>
+    <edge source="View.TriangleView" target="View.TwoDView">
+      <point x="0.0" y="-37.0" />
+      <point x="739.5" y="1153.0" />
+      <point x="538.0" y="1153.0" />
+      <point x="99.0" y="115.0" />
+    </edge>
+    <edge source="View.BlocView" target="View.ThreeDView">
+      <point x="0.0" y="-37.0" />
+      <point x="1065.5" y="1153.0" />
+      <point x="1265.0" y="1153.0" />
+      <point x="-99.0" y="115.0" />
+    </edge>
+    <edge source="View.SquareView" target="View.TwoDView">
+      <point x="0.0" y="-37.0" />
+      <point x="141.0" y="1153.0" />
+      <point x="340.0" y="1153.0" />
+      <point x="-99.0" y="115.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="1098.142857142857" y="1394.4285714285713" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

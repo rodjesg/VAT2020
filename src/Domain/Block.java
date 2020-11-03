@@ -1,5 +1,8 @@
 package Domain;
 
+import java.text.DecimalFormat;
+import java.io.Serializable;
+
 /**
  * @author Rodney
  */
@@ -21,7 +24,8 @@ public class Block extends ThreeDimensionalShape {
      */
     @Override
     public double getVolume() {
-        return (this.length*this.height*this.width);
+        return   Double.parseDouble(new DecimalFormat("##.##").format((this.length*this.height*this.width)));
+
     }
 
     /**
@@ -47,9 +51,28 @@ public class Block extends ThreeDimensionalShape {
 
     @Override
     public String toString() {
-        return "Length = " + this.length + " cm\n" +
-                "Width = " + this.width + " cm\n" +
-                "Height = " + this.height + " cm\n" +
+        String strLengt = ( new DecimalFormat("##.##").format(this.length) );
+        String strWidth = ( new DecimalFormat("##.##").format(this.width) );
+        String strHeight = ( new DecimalFormat("##.##").format(this.height) );
+        return
+//                "Length = " + strLengt + " cm\n" +
+//                "Width = " + strWidth + " cm\n" +
+//                "Height = " + strHeight + " cm\n" +
                 super.toString();
+    }
+
+    @Override
+    public double getLength() {
+        return this.length;
+    }
+
+    @Override
+    public double getWidth() {
+        return this.width;
+    }
+
+    @Override
+    public double getHeight() {
+        return this.height;
     }
 }
